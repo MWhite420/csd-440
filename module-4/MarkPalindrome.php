@@ -1,27 +1,22 @@
-
-
 <?php
-// Function to test if a string is a palindrome
-function isPalindrome($string) {
-    // Normalize: lowercase and remove spaces
-    $normalized = strtolower(str_replace(' ', '', $string));
-    // Reverse string
-    $reversed = strrev($normalized);
-    // Compare
-    return $normalized === $reversed;
-}
+/*
+Mark White
+CSD440
+Mod4
+*/
+
+require 'palindromeTester.php';
 
 // Test strings (3 palindromes, 3 not)
 $testString= [
     "level",        // palindrome
     "Racecar",      // palindrome (case insensitive)
-    "Never odd or even", // palindrome (ignores spaces)
+    "Stanley Yelnats", // palindrome (removes spaces/case) From book/movie holes
     "hello",        // not
     "world",        // not
     "PHP coding"    // not
 ];
 
-// Run tests
 foreach ($testString as $text) {
     $normalized = strtolower(str_replace(' ', '', $text));
     $reversed = strrev($normalized);
