@@ -24,30 +24,26 @@
 
 <table>
     <?php
-    function addNumbers($a, $b) {
-        return $a + $b;
-    }
+
+    require 'addSum.php' ;
 
     // Set table dimensions
     $rows = 5;
     $cols = 5;
     
-    // Outer loop for table rows
-    for ($i = 0; $i < $rows; $i++) {
-        echo "<tr>";
-        
-        // Inner loop for table columns
-        for ($j = 0; $j < $cols; $j++) {
-            // Generate two random numbers
-            $num1 = rand(1, 50);
-            $num2 = rand(1, 50);
-            $sum = addNumbers($num1, $num2);
-    ?>
-            <td><?php echo $sum; ?></td>
-    <?php
-        }
-        echo "</tr>";
-    }
-    ?>
+    for ($i = 0; $i < $rows; $i++): ?>
+        <tr>
+            <?php for ($j = 0; $j < $cols; $j++): 
+                $num1 = rand(1, 50);
+                $num2 = rand(1, 50);
+                $sum = addNumbers($num1, $num2);
+            ?>
+                <td><?php echo $sum; ?></td>
+            <?php endfor; ?>
+        </tr>
+    <?php endfor; ?>
+</table>
+
+    
 </table>
 </html>

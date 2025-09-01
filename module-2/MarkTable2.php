@@ -22,25 +22,17 @@
 <h2>Random Numbers Table</h2>
 
 <table>
-    <?php
-    // Set table dimensions
-    $rows = 5;
-    $cols = 5;
-
-    // Outer loop for table rows
-    for ($i = 0; $i < $rows; $i++) {
-        echo "<tr>";
-        
-        // Inner loop for table columns
-        for ($j = 0; $j < $cols; $j++) {
-            // Generate two random numbers
-            $randNum = rand(1, 100);
-    ?>
-            <td><?php echo $randNum; ?></td>
-    <?php
-        }
-        echo "</tr>";
-    }
-    ?>
+    
+    <?php 
+    $rows = 5
+    $cols = 5
+    
+    for ($i = 0; $i < $rows; $i++): ?>
+        <tr>
+            <?php for ($j = 0; $j < $cols; $j++): ?>
+                <td><?php echo rand(1, 100); ?></td>
+            <?php endfor; ?>
+        </tr>
+    <?php endfor; ?>
 </table>
 </html>
