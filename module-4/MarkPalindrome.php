@@ -1,5 +1,3 @@
-
-
 <?php
 /*
 Mark White
@@ -21,7 +19,7 @@ function isPalindrome($string) {
 $testString= [
     "level",        // palindrome
     "Racecar",      // palindrome (case insensitive)
-    "Stanley Yelnats", // palindrome (removes spaces/case) From book/movies
+    "Stanley Yelnats", // palindrome (removes spaces/case) From holes book/movie
     "hello",        // not
     "world",        // not
     "PHP coding"    // not
@@ -34,7 +32,7 @@ foreach ($testString as $text) {
     $result = isPalindrome($text) ? "Palindrome" : "Not a palindrome";
 
     echo "Original: $text<br>";
-    echo "Reversed: $reversed <br>";
+    echo "Reversed: $reversed<br>";
     echo "Result: $result<br><br>";
 }
 ?>
