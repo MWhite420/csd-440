@@ -1,4 +1,9 @@
 <?php
+/*
+Mark White
+CSD440
+Mod4
+*/
 
 // Function to test if a string is a palindrome
 function isPalindrome($string) {
